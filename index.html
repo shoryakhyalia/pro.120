@@ -1,0 +1,288 @@
+<html>
+<head>
+  <title>Real Time Image Identification App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/ml5@0.7.0/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <center>
+        <h3 style="color: red; font-size: 30px; font-weight: bolder;top: 0;">CASE STUDY GOOGLE LENS VS MOBILENET </h3>
+        <span style="font-size: 20px; font-weight: bolder;  color: rgb(0, 0, 0); width: 300px; height: 30px; text-align: center; border-radius: 20px;">GOOGLE LENS  <img src="download.png"></span>
+        <h3 style="font-size: 20px;font-weight: bolder; color: black;">VS</h3>
+        <h3 style="font-size: 20px;font-weight: bolder; background-color:blue; color: white; width: 220px; height: 35px; padding-top: 8px; text-align: center; border-radius: 10px;">MOBILENET</h3>
+        <hr>
+       <div class="test_image_and_result col-xs-12" style="background-color: gray; height: 60%; margin-top: 30px;  margin-left: 5%; border-radius: 30px; width: 90%;">
+
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image - </b>
+          <img style="border-radius: 30px; width: 300px; height: 300px;" src="222 (1).jpeg" class="img-responsive">
+        </li>
+
+        <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+          Output On <b style="color: rgb(0, 4, 255);">GOOGLE LENS - </b>
+          <span>Speaker</span>
+        </h5>
+
+        <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+          Output On <b style="color: rgb(0, 4, 255);">MOBILENET MODEL - </b>
+          <span>Radio</span>
+        </h5>
+        <div class="mini_result"  class="col-xs-12">
+          <h4 style="font-weight: bolder;">Result - </h4>
+          <hr>
+          <h4 style="color: aliceblue;">GOOGLE LENS is more accurate</h4>
+        </div>
+       </div>
+        <div class="test_image_and_result col-xs-12" style="background-color: gray; height: 60%; margin-top: 30px;  margin-left: 5%; border-radius: 30px; width: 90%;">
+ 
+         <li class="col-sm-4 col-xs-12">
+           <b>Test Image - </b>
+           <img style="border-radius: 30px;width: 300px; height: 300px;" src="222 (2).jpeg" class="img-responsive">
+         </li>
+ 
+         <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+           Output On <b style="color: rgb(0, 4, 255);">GOOGLE LENS - </b>
+           <span>Showpeace</span>
+         </h5>
+ 
+         <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+           Output On <b style="color: rgb(0, 4, 255);">MOBILENET MODEL - </b>
+           <span>Statue</span>
+         </h5>
+         <div class="mini_result"  class="col-xs-12">
+           <h4 style="font-weight: bolder;">Result - </h4>
+           <hr>
+           <h4 style="color: aliceblue;">GOOGLE LENS is more accurate</h4>
+         </div>
+        </div>
+        <div class="test_image_and_result col-xs-12" style="background-color: gray; height: 60%; margin-top: 30px;  margin-left: 5%; border-radius: 30px; width: 90%;">
+ 
+         <li class="col-sm-4 col-xs-12">
+           <b>Test Image - </b>
+           <img style="border-radius: 30px; width: 300px; height: 300px;" src="222 (3).jpeg" class="img-responsive">
+         </li>
+ 
+         <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+           Output On <b style="color: rgb(0, 4, 255);">GOOGLE LENS - </b>
+           <span>Adapter</span>
+         </h5>
+ 
+         <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+           Output On <b style="color: rgb(0, 4, 255);">MOBILENET MODEL - </b>
+           <span>Plug</span>
+         </h5>
+         <div class="mini_result"  class="col-xs-12">
+           <h4 style="font-weight: bolder;">Result - </h4>
+           <hr>
+           <h4 style="color: aliceblue;">GOOGLE LENS is more accurate</h4>
+         </div>
+        </div>
+        <div class="test_image_and_result col-xs-12" style="background-color: gray; height: 60%; margin-top: 30px;  margin-left: 5%; border-radius: 30px; width: 90%;">
+ 
+         <li class="col-sm-4 col-xs-12">
+           <b>Test Image - </b>
+           <img style="border-radius: 30px; width: 300px; height: 300px;" src="222 (4).jpeg" class="img-responsive">
+         </li>
+ 
+         <h5 class="col-sm-4 col-xs-12" style="font-size: 19px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+           Output On <b style="color: rgb(0, 4, 255);">GOOGLE LENS - </b>
+           <span>Tata Sky Remote</span>
+         </h5>
+ 
+         <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+           Output On <b style="color: rgb(0, 4, 255);">MOBILENET MODEL - </b>
+           <span>Remote</span>
+         </h5>
+         <div class="mini_result"  class="col-xs-12">
+           <h4 style="font-weight: bolder;">Result - </h4>
+           <hr>
+           <h4 style="color: aliceblue;">GOOGLE LENS is more accurate</h4>
+         </div>
+        </div>
+        <div class="test_image_and_result col-xs-12" style="background-color: gray; height: 60%; margin-top: 30px; margin-left: 5%; border-radius: 30px; width: 90%;">
+ 
+         <li class="col-sm-4 col-xs-12">
+           <b>Test Image - </b>
+           <img style="border-radius: 30px; width: 300px; height: 300px;" src="222 (5).jpeg" class="img-responsive">
+         </li>
+ 
+         <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+           Output On <b style="color: rgb(0, 4, 255);">GOOGLE LENS - </b>
+           <span>Denver Deo</span>
+         </h5>
+ 
+         <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+           Output On <b style="color: rgb(0, 4, 255);">MOBILENET MODEL - </b>
+           <span>Bottle</span>
+         </h5>
+         <div class="mini_result"  class="col-xs-12">
+           <h4 style="font-weight: bolder;">Result - </h4>
+           <hr>
+           <h4 style="color: aliceblue;">GOOGLE LENS is more accurate</h4>
+         </div>
+        </div>
+        <div class="test_image_and_result col-xs-12" style="background-color: gray; height: 60%; margin-top: 30px; margin-left: 5%; border-radius: 30px; width: 90%;">
+ 
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image - </b>
+            <img style="border-radius: 30px; width: 300px; height: 300px;" src="22222 (5).jpeg" class="img-responsive">
+          </li>
+  
+          <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+            Output On <b style="color: rgb(0, 4, 255);">GOOGLE LENS - </b>
+            <span>Doreamonke..</span>
+          </h5>
+  
+          <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+            Output On <b style="color: rgb(0, 4, 255);">MOBILENET MODEL - </b>
+            <span>Keychain</span>
+          </h5>
+          <div class="mini_result"  class="col-xs-12">
+            <h4 style="font-weight: bolder;">Result - </h4>
+            <hr>
+            <h4 style="color: aliceblue;">GOOGLE LENS is more accurate</h4>
+          </div>
+         </div>
+         <div class="test_image_and_result col-xs-12" style="background-color: gray; height: 60%; margin-top: 30px; margin-left: 5%; border-radius: 30px; width: 90%;">
+ 
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image - </b>
+            <img style="border-radius: 30px; width: 300px; height: 300px;" src="22222 (4).jpeg" class="img-responsive">
+          </li>
+  
+          <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+            Output On <b style="color: rgb(0, 4, 255);">GOOGLE LENS - </b>
+            <span>watch</span>
+          </h5>
+  
+          <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+            Output On <b style="color: rgb(0, 4, 255);">MOBILENET MODEL - </b>
+            <span>Clock</span>
+          </h5>
+          <div class="mini_result"  class="col-xs-12">
+            <h4 style="font-weight: bolder;">Result - </h4>
+            <hr>
+            <h4 style="color: aliceblue;">GOOGLE LENS is more accurate</h4>
+          </div>
+         </div>
+         <div class="test_image_and_result col-xs-12" style="background-color: gray; height: 60%; margin-top: 30px; margin-left: 5%; border-radius: 30px; width: 90%;">
+ 
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image - </b>
+            <img style="border-radius: 30px; width: 300px; height: 300px;" src="22222 (3).jpeg" class="img-responsive">
+          </li>
+  
+          <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+            Output On <b style="color: rgb(0, 4, 255);">GOOGLE LENS - </b>
+            <span>Card</span>
+          </h5>
+  
+          <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+            Output On <b style="color: rgb(0, 4, 255);">MOBILENET MODEL - </b>
+            <span>paper</span>
+          </h5>
+          <div class="mini_result"  class="col-xs-12">
+            <h4 style="font-weight: bolder;">Result - </h4>
+            <hr>
+            <h4 style="color: aliceblue;">GOOGLE LENS is more accurate</h4>
+          </div>
+         </div>
+         <div class="test_image_and_result col-xs-12" style="background-color: gray; height: 60%; margin-top: 30px; margin-left: 5%; border-radius: 30px; width: 90%;">
+ 
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image - </b>
+            <img style="border-radius: 30px; width: 300px; height: 300px;" src="22222 (2).jpeg" class="img-responsive">
+          </li>
+  
+          <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+            Output On <b style="color: rgb(0, 4, 255);">GOOGLE LENS - </b>
+            <span>Battery</span>
+          </h5>
+  
+          <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+            Output On <b style="color: rgb(0, 4, 255);">MOBILENET MODEL - </b>
+            <span>Box</span>
+          </h5>
+          <div class="mini_result"  class="col-xs-12">
+            <h4 style="font-weight: bolder;">Result - </h4>
+            <hr>
+            <h4 style="color: aliceblue;">GOOGLE LENS is more accurate</h4>
+          </div>
+         </div>
+         <div class="test_image_and_result col-xs-12" style="background-color: gray; height: 60%; margin-top: 30px; margin-left: 5%; border-radius: 30px; width: 90%;">
+ 
+          <li class="col-sm-4 col-xs-12">
+            <b>Test Image - </b>
+            <img style="border-radius: 30px; width: 300px; height: 300px;" src="22222 (1).jpeg" class="img-responsive">
+          </li>
+  
+          <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+            Output On <b style="color: rgb(0, 4, 255);">GOOGLE LENS - </b>
+            <span>Abacus Tool</span>
+          </h5>
+  
+          <h5 class="col-sm-4 col-xs-12" style="font-size: 20px;font-weight: bolder; background-color:rgb(255, 255, 255); color: rgb(0, 0, 0); height: 35px; padding-top: 8px; text-align: center; border-radius: 40px;">
+            Output On <b style="color: rgb(0, 4, 255);">MOBILENET MODEL - </b>
+            <span>Toy</span>
+          </h5>
+          <div class="mini_result"  class="col-xs-12">
+            <h4 style="font-weight: bolder;">Result - </h4>
+            <hr>
+            <h4 style="color: aliceblue;">GOOGLE LENS is more accurate</h4>
+          </div>
+         </div>
+
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br><br><br><br>
+      <br><br><br>
+    </center>
+    <br>
+<div class="copy_right_footer">
+  Developed By - Shorya Vardhan
+</div>
+<script src="main.js"></script>
+</body>
+
+</html>
